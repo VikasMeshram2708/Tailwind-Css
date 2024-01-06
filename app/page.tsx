@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -20,6 +21,12 @@ export default function Home() {
   }, [toggleTheme]);
   return (
     <main className="flex min-h-screen dark:bg-black dark:text-white flex-col items-center justify-between p-24">
+      <h1>Home Page</h1>
+      <p>
+        <Link href="/users">
+          Users
+        </Link>
+      </p>
       <button
         onClick={handleThemeToggler}
         type="button"
